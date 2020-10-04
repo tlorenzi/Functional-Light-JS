@@ -1,4 +1,3 @@
-# Functional-Light JavaScript
 # Chapter 2: The Nature Of Functions
 
 functions really *are* at the center of FP. And it's how we use functions that makes our code *functional*.
