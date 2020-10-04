@@ -8,7 +8,7 @@ In math, a function always takes input(s), and always gives an output. A term yo
 
 ### Function vs Procedure
 
-So why all the talk of math and graphs? Because essentially Functional Programming is about embracing using functions as *functions* in this mathematical sense.
+Functional Programming is about embracing using functions as *functions* in this mathematical sense.
 
 You may be more accustomed to thinking of functions as procedures. What's the difference? A procedure is an arbitrary collection of functionality. It may have inputs, it may not. It may have an output (`return` value), it may not.
 
@@ -16,13 +16,7 @@ A function takes input(s) and definitely always has a `return` value.
 
 If you plan to do Functional Programming, **you should be using functions as much as possible**, and trying to avoid procedures wherever possible. All your `function`s should take input(s) and return output(s).
 
-Why? The answer to that will have many levels of meaning that we'll uncover throughout this book.
-
 ## Function Input
-
-So far, we can conclude that functions must expect input. But let's dig into how function inputs work.
-
-You sometimes hear people refer to these inputs as "arguments" and sometimes as "parameters". So what's that all about?
 
 *Arguments* are the values you pass in, and *parameters* are the named variables inside the function that receive those passed-in values. Example:
 
@@ -35,16 +29,13 @@ var a = 3;
 
 foo( a, a * 2 );
 ```
+a and a * 2 are *arguements* and x/y are *parameters*
 
-`a` and `a * 2` (actually, the result of `a * 2`, which is `6`) are the *arguments* to the `foo(..)` call. `x` and `y` are the *parameters* that receive the argument values (`3` and `6`, respectively).
-
-**Note:** In JavaScript, there's no requirement that the number of *arguments* matches the number of *parameters*. If you pass more *arguments* than you have declared *parameters* to receive them, the values pass in just fine untouched. These values can be accessed in a few different ways, including the old-school `arguments` object you may have heard of before. If you pass fewer *arguments* than the declared *parameters*, each unmatched parameter is treated as an "undefined" variable, meaning it's present and available in the scope of the function, but just starts out with the empty `undefined` value.
+**Note:** In JavaScript, there's no requirement that the number of *arguments* matches the number of *parameters*. If you pass more *arguments* than you have declared *parameters* to receive them, these values can be accessed in a few different ways, including the old-school `arguments` object. If you pass fewer *arguments* than the declared *parameters*, each unmatched parameter is treated as an "undefined" variable.
 
 ### Defaulting Parameters
 
-As of ES6, parameters can declare *default values*. In the case where the argument for that parameter is not passed, or it's passed the value `undefined`, the default assignment expression is substituted.
-
-Consider:
+As of ES6, parameters can declare *default values*. 
 
 ```js
 function foo(x = 3) {
@@ -56,8 +47,6 @@ foo( undefined );       // 3
 foo( null );            // null
 foo( 0 );               // 0
 ```
-
-It's always a good practice to think about any default cases that can aid the usability of your functions. However, defaulting parameters can lead to more complexity in terms of reading and understanding the variations of how a function is called. Be judicious in how much you rely on this feature.
 
 ### Counting Inputs
 
