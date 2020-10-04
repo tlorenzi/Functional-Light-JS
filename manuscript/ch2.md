@@ -1,41 +1,11 @@
 # Functional-Light JavaScript
 # Chapter 2: The Nature Of Functions
 
-Functional Programming is **not just programming with the `function` keyword.** Oh, if only it was that easy -- I could end the book right here! Nevertheless, functions really *are* at the center of FP. And it's how we use functions that makes our code *functional*.
+functions really *are* at the center of FP. And it's how we use functions that makes our code *functional*.
 
-But how sure are you that you know what *function* really means?
-
-In this chapter, we're going to lay the groundwork for the rest of the book by exploring all the foundational aspects of functions. Actually, this is a review of all the things even a non-FP programmer should know about functions. But certainly if we want to get the most out of FP concepts, it's essential we *know* functions inside and out.
-
-Brace yourself, because there's a lot more to the function than you may have realized.
-
-## What Is a Function?
-
-The question "What is a function?" superficially seems to have an obvious answer: a function is a collection of code that can be executed one or more times.
-
-While this definition is reasonable, it's missing some very important essence that is the core of a *function* as it applies to FP. So let's dig below the surface to understand functions more completely.
-
-### Brief Math Review
-
-I know I've promised we'd stay away from math as much as possible, but bear with me for a moment as we quickly observe some fundamental things about functions and graphs from algebra before we proceed.
-
-Do you remember learning anything about `f(x)` back in school? What about the equation `y = f(x)`?
-
-Let's say an equation is defined like this: <code>f(x) = 2x<sup>2</sup> + 3</code>. What does that mean? What does it mean to graph that equation? Here's the graph:
-
-<p align="center">
-    <img src="images/fig1.png" width="40%">
-</p>
-
-What you can notice is that for any value of `x`, say `2`, if you plug it into the equation, you get `11`. What is `11`, though? It's the *return value* of the `f(x)` function, which earlier we said represents a `y` value.
-
-In other words, we can choose to interpret the input and output values as a point at `(2,11)` on that curve in the graph. And for every value of `x` we plug in, we get another `y` value that pairs with it as a coordinate for a point. Another is `(0,3)`, and another is `(-1,5)`. Put all those points together, and you have the graph of that parabolic curve as shown here.
-
-So what's any of this got to do with FP?
+a function is a collection of code that can be executed one or more times.
 
 In math, a function always takes input(s), and always gives an output. A term you'll often hear around FP is "morphism"; this is a fancy way of describing a set of values that maps to another set of values, like the inputs of a function related to the outputs of that function.
-
-In algebraic math, those inputs and outputs are often interpreted as components of coordinates to be graphed. In our programs, however, we can define functions with all sorts of input(s) and output(s), even though they'll rarely be interpreted as a visually plotted curve on a graph.
 
 ### Function vs Procedure
 
